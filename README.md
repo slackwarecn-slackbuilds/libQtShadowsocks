@@ -16,9 +16,10 @@ Check installation wiki page to see how to install this library and/or shadowsoc
 ## usage
 
 ```
-wget https://github.com/shadowsocks/libQtShadowsocks/archive/v1.9.0.tar.gz
-git clone https://github.com/libQtShadowsocks-slackbuild
-cd libQtShadowsocks-slackbuild
-ln -s ../v1.9.0.tar.gz .
-sudo sh libQtShadowsocks.SlackBuild
+git clone https://github.com/slackwarecn-slackbuilds/libQtShadowsocks.git
+cd libQtShadowsocks
+source libQtShadowsocks.info
+wget $DOWNLOAD
+./libQtShadowsocks.SlackBuild
 ```
+
