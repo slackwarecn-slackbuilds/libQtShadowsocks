@@ -49,7 +49,7 @@
 # |-----------------------------------------------------------------| #
 
 PRGNAM=libQtShadowsocks			# replace with name of program
-VERSION=${VERSION:-1.9.0}	# replace with version of program
+VERSION=${VERSION:-2.1.0}	# replace with version of program
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SlackwareCN}		# the "_SBo" is required
 
@@ -116,7 +116,8 @@ find -L . \
 #   --build=$ARCH-slackware-linux
 
 # Compile the application and install it into the $PKG directory
-qmake-qt5 DEFINES+=LIB64 INSTALL_PREFIX=$PKG/usr
+mkdir build && cd build
+cmake .. -DCMAKE_INSTALL_PREFIX=/usr -DUSE_BOTAN2=ON
 make
 make install
 
